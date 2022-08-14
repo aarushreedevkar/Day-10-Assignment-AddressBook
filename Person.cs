@@ -7,82 +7,78 @@ using System.Threading.Tasks;
 namespace AddressBook2
 {
     public class Person
-    {
-        string firstName;
-        string lastName;
-        string address;
-        string city;
-        string state;
-        string zip;
-        string phoneNumber;
-        string email;
-        internal int PhoneNumber;
-        internal string? Email;
-        internal string? State;
-        internal string? City;
-        internal string? Address;
-        internal string? LastName;
-        internal readonly string FirstName;
+   	public string FirstName;
+	public string LastName;
+	public string city;
+	public string state;
+	public string email;
+	public string phoneNumber;
+	//parameterized constructor for initializing instance member
+	public Person(string firstName, string lastName, string city, string state, string email, string phoneNumber)//Parameterized Constructor
+	{
+		this.FirstName = firstName;
+		this.LastName = lastName;
+		this.city = city;
+		this.state = state;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
+	}
+	public String getFirstName() /// get method returns the value of the variable FirstName.
+	{
+		return FirstName;
+	}
 
-        public Person(string firstName, string lastName, string address, string city, string state, string zip, string phoneNumber, string email)
-        {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.address = address;
-            this.city = city;
-            this.state = state;
-            this.zip = zip;
-            this.phoneNumber = phoneNumber;
-            this.email = email;
-        }
+	public void setFirstName(String firstName)  // set method assigns a value to the name variable.
+	{
+		this.FirstName = firstName;
+	}
 
-        public Person()
-        {
-        }
+	public String getLastName() //get method returns the value of the variable LastName.
+	{
+		return LastName;
+	}
 
-        public string getName()
-        {
-            return this.firstName;
-        }
-        public string getlastName()
-        {
-            return this.lastName;
-        }
-        public string getaddress()
-        {
-            return this.address;
-        }
-        public string getcity()
-        {
-            return this.city;
-        }
-        public string getstate()
-        {
-            return this.state;
-        }
-        public string getzip()
-        {
-            return this.zip;
-        }
-        public string getphone()
-        {
-            return this.phoneNumber;
-        }
-        public string getemail()
-        {
-            return this.email;
-        }
-        public string Tostring()
-        {
-            return "First Name:" + firstName + "\nLast Name:" + lastName + "\nAddress:" + address + "\nState:" + state + "\nCity:" + city + "\nZip:" + zip + "\nPhoneNumber:" + phoneNumber;
-            // return "Name is:" + this.firstName +\n+ this.lastName+
-        }
+	public void setLastName(String lastName) //set method assigns a value to the name variable.
+	{
+		this.LastName = lastName;
+	}
 
-    }
+	public String getCity()
+	{
+		return city;
+	}
 
+	public void setCity(String city)
+	{
+		this.city = city;
+	}
 
+	public String getState()
+	{
+		return state;
+	}
 
+	public void setState(String state)
+	{
+		this.state = state;
+	}
+	public String getPhoneNumber()
+	{
+		return phoneNumber;
+	}
 
+	public void setPhoneNumber(String phoneNumber)
+	{
+		this.phoneNumber = phoneNumber;
+	}
 
+	public String getEmail()
+	{
+		return email;
+	}
 
+	public void setEmail(String email)
+	{
+		this.email = email;
+	}
 }
